@@ -1,7 +1,7 @@
 {
-    "name": "kingflamez/laravelrave",
-    "description": "A Laravel 5 Package for Flutterwave Rave",
-    "keywords": ["php","github", "laravel","Open Source","payments", "kingflamez", "Flutterwave Rave", "Flutterwave", "rave", "ravepay.co","laravel 5"],
+    "name": "godfreykori/laravelrave",
+    "description": "A Laravel 6 Package for Flutterwave Rave",
+    "keywords": ["php","github", "laravel","Open Source","payments", "Flutterwave Rave", "Flutterwave", "rave", "ravepay.co","laravel 6"],
     "license": "MIT",
     "authors": [
         {
