@@ -76,18 +76,13 @@ class Rave
         $this->transactionPrefix = $prefix . '_';
         $this->overrideTransactionReference = $overrideRefWithPrefix;
 
-
-        Log::notice('Generating Reference Number....');
         if ($this->overrideTransactionReference) {
             $this->txref = $this->transactionPrefix;
         } else {
             $this->txref = uniqid($this->transactionPrefix);
         }
-        Log::notice('Generated Reference Number....' . $this->txref);
-
+      
         $this->baseUrl = $this->urls[($this->env === "live" ? "$this->env" : "others")];
-
-        Log::notice('Rave Class Initializes....');
     }
 
 
@@ -123,8 +118,7 @@ class Rave
         if ($this->request->ref) {
             $this->txref = $this->request->ref;
         }
-
-        Log::notice('Generating Checksum....');
+        
         $options = array(
             "PBFPubKey" => $this->publicKey,
             "amount" => $this->request->amount,
@@ -573,8 +567,7 @@ class Rave
     {
         $this->txref = $referenceNumber;
         $this->verifyCount++;
-        Log::notice('Verifying Transaction....' . $this->txref);
-
+        
         $data = array(
             'txref' => $this->txref,
             'SECKEY' => $this->secretKey,
