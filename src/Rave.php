@@ -620,6 +620,7 @@ class Rave
             'amount' => $this->request->amount,
             'interval' => $this->request->interval,
             'name' => $this->request->name,
+            'currency' => $this->request->currency,
             'duration' => $this->request->duration,
             'seckey' => $this->secretKey
         );
